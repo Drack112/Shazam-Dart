@@ -1,0 +1,11 @@
+services:
+  shazam_api:
+    build:
+      context: shazam_api
+      dockerfile: Dockerfile
+    container_name: shazam_api
+    restart: unless-stopped
+    expose:
+      - 5000
+    environment:
+      FLASK_ENV: production
